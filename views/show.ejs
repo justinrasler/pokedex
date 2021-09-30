@@ -7,6 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>WHOS THAT POKEMON</h1>
+    <h2> <%= pokemons.name %></h2>
+    <img src="<%= pokemons.img %>">
+        <h2 ><%= pokemons.type %> type</h2>
+        <h3>health: <%= pokemons.stats.hp %></h3>
+        <h3>attack: <%= pokemons.stats.attack %></h3>
+        <h3>defense: <%= pokemons.stats.defense %></h3>
+        <h3>speed: <%= pokemons.stats.speed %></h3>
+        <h3>special attack: <%= pokemons.stats.spattack %></h3>
+        <h3>special defense: <%= pokemons.stats.spdefense %></h3>
+        <br><a href="/pokemon">Back to Index</a>
+
 </body>
 </html>
+
