@@ -2,26 +2,43 @@
 <html lang="en">
     <%- include("./partials/head.ejs") %>
 
-    
+    <%- include("./partials/showheader.ejs") %>
 <body>
+  <div class="centerdiv">
         <div class="card" style="width: 18rem;">
             <img src="<%= pokemons.img %>" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">Pokemon selected</h5>
               <p class="card-text">
-                <%= pokemons.name %>
+                <h2><%= pokemons.name %></h2>
                   <h2 ><%= pokemons.type %> type</h2>
-                <h3>hp: <%= pokemons.stats.hp %></h3>
+                <!-- <h3>hp: <%= pokemons.stats.hp %></h3>
                 <h3>attack: <%= pokemons.stats.attack %></h3>
                 <h3>defense: <%= pokemons.stats.defense %></h3>
                 <h3>special attack: <%= pokemons.stats.spattack %></h3>
                 <h3>special defense: <%= pokemons.stats.spdefense %></h3>
-                <h3>speed: <%= pokemons.stats.speed %></h3></p>
+                <h3>speed: <%= pokemons.stats.speed %></h3></p> -->
               <a href="/pokemon" class="btn btn-primary">Pokedex Home</a>
             </div>
           </div>
-
-          
+</div><br>
+<div class="centerdiv">
+  <div class="card" style="width: 18rem;">
+      <!-- <img src="<%= pokemons.img %>" class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <p class="card-text">
+          <!-- <h2><%= pokemons.name %></h2>
+            <h2 ><%= pokemons.type %> type</h2> -->
+          <h3>hp: <%= pokemons.stats.hp %></h3>
+          <h3>attack: <%= pokemons.stats.attack %></h3>
+          <h3>defense: <%= pokemons.stats.defense %></h3>
+          <h3>special attack: <%= pokemons.stats.spattack %></h3>
+          <h3>special defense: <%= pokemons.stats.spdefense %></h3>
+          <h3>speed: <%= pokemons.stats.speed %></h3></p>
+        <!-- <a href="/pokemon" class="btn btn-primary">Pokedex Home</a> -->
+      </div>
+    </div>
+</div>
 
 </body>
 </html>
