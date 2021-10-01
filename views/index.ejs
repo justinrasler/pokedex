@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <ul>
-       <% for(let i = 0; i < allPokemon.length; i++){ %>
-<li>
-    <a href="/pokemon/<%= i %>">
-    <%= allPokemon[i].name %>
-    </a>
-    <img src='allPokemon.img'> 
-</li>
+    <%- include("./partials/head.ejs") %>
 
-<% } %>
-    </ul>
+    <%- include("./partials/header.ejs") %>
+<body>
+    <a href="/pokemon/new"><button>+</button></a>
+    <ul>
+        <% for(let i = 0; i < allPokemon.length; i++){ %>
+    <div class="card" style="width: 18rem;">
+        <img src="<%= allPokemon[i].img %>"width="200" height="200" class="card-img-top" alt="...">
+        <div class="card-body">
+
+          
+       <li>
+           <a href="/pokemon/<%= i %>" class="btn btn-primary">
+           <%= allPokemon[i].name %>
+           </a>
+           <form action="/pokemon/<%= i %>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE">
+        <br><a href="/pokemon/<%= i %>/edit">edit</a>
+        </form>
+       </li>
+       
+       
+        </div>
+      </div>
+      <% } %>
+           </ul>
 </body>
 </html>
 

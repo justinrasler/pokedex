@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include("./partials/header.ejs") %>
+    <h1>Update Pokedex</h1>
+    <form action="/pokemon/<%= index %>?_method=PUT" method="POST">
+        <img src="<%= pokemons.img %>"width="200" height="200" class="card-img-top" alt="...">
+      <input type="text" name="name" placeholder="name" value="<%= pokemons.name %>"/><br>
+     <input type="text" name="type" placeholder="type" value="<%= pokemons.type %>"/><br>
+     <input type="text" name="hp" placeholder="hp" value="<%= pokemons.stats.hp %>"/><br>
+     <input type="text" name="attack" placeholder="attack" value="<%= pokemons.stats.attack %>"/><br>
+     <input type="text" name="defense" placeholder="defense" value="<%= pokemons.stats.defense %>"/><br>
+     <input type="text" name="spattack" placeholder="special attack" value="<%= pokemons.stats.spdefense %>"/><br>
+     <input type="text" name="spdefense" placeholder="special defense" value="<%= pokemons.stats.spdefense %>"/><br>
+     <input type="text" name="speed" placeholder="speed" value="<%= pokemons.stats.speed %>"/><br>
+        <input type="submit" value="Update Pokedex"/>
+
+    </form>
+
+
+</body>
+</html>
